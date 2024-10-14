@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pencatatan Keuangan Pribadi</title>
+		<!-- Link Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container mt-5">
+			<h1 class="text-center">Pencatatan Keuangan Pribadi</h1>
+			<form id="finance-form" class="mb-4">
+				<div class="input-group mb-3">
+					<input type="text" id="description" class="form-control" placeholder="Deskripsi" required />
+					<input type="number" id="amount" class="form-control" placeholder="Jumlah" required />
+					<select id="type" class="form-select">
+						<option value="income">Pemasukan</option>
+						<option value="expense">Pengeluaran</option>
+					</select>
+					<button type="submit" class="btn btn-primary">Tambahkan</button>
+				</div>
+			</form>
+
+			<canvas id="financeChart" width="400" height="200" class="mb-4"></canvas>
+			<h2 class="text-center">Catatan Keuangan</h2>
+			<ul id="finance-list" class="list-group mb-4"></ul>
+			<button id="reset-button" class="btn btn-danger btn-block">Reset Semua Catatan</button>
+		</div>
+
+		<script src="script.js"></script>
+		<!-- Link Bootstrap JS (Optional for interactive components) -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
